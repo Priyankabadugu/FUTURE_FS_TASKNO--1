@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f3f4f6;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060b19;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252e4d;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b4875;
+  }
+}
+
+/* Developer font utility */
+.font-mono-code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Background animated glow gradients */
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15) 0%, rgba(59, 130, 246, 0.08) 35%, rgba(3, 7, 18, 0) 70%);
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.4));
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism card utility */
+.glass-panel {
+  background: rgba(13, 19, 36, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.glass-panel:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* Print styling for resume */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
